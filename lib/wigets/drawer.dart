@@ -6,13 +6,13 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageUrl =
+    const imageUrl =
         "https://media.licdn.com/dms/image/D4D03AQG9tKupqD8M_g/profile-displayphoto-shrink_800_800/0/1687423212065?e=2147483647&v=beta&t=qJQurxmpM3AOmw8_8Oq3vymFXhIEbQgUAadvhsvD_TE";
     return Drawer(
       child: Container(
         color: Colors.blue,
         child: ListView(
-          children: [
+          children: const [
             DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
