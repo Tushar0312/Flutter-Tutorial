@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/wigets/drawer.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     var name = "Tushar";
@@ -16,7 +19,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
