@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -32,6 +33,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
+      color: context.theme.canvasColor,
       child: SingleChildScrollView(
         child: Form(
           key: _formKey,
@@ -64,7 +66,9 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                          hintText: "Enter Username", labelText: "Username"),
+                        hintText: "Enter Username",
+                        labelText: "Username",
+                      ),
                       validator: (value) {
                         if (value!.isEmpty) {
                           return "Username cannot be Empty";
@@ -80,7 +84,9 @@ class _LoginPageState extends State<LoginPage> {
                     TextFormField(
                       obscureText: true,
                       decoration: InputDecoration(
-                          hintText: "Enter Password", labelText: "Password"),
+                        hintText: "Enter Password",
+                        labelText: "Password",
+                      ),
                       validator: (value) {
                         if (value!.isEmpty) {
                           return "Password cannot be Empty";
@@ -95,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                       height: 20.0,
                     ),
                     Material(
-                      color: Colors.blue,
+                      color: context.theme.highlightColor,
                       borderRadius:
                           BorderRadius.circular(changeButton ? 50 : 8),
                       child: InkWell(
